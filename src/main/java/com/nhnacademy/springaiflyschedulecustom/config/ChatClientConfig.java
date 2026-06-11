@@ -2,6 +2,7 @@ package com.nhnacademy.springaiflyschedulecustom.config;
 
 import com.nhnacademy.springaiflyschedulecustom.mcptool.AirlineInfoTool;
 import com.nhnacademy.springaiflyschedulecustom.mcptool.AirportInfoTool;
+import com.nhnacademy.springaiflyschedulecustom.mcptool.FlightSearchTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.model.ChatModel;
@@ -17,10 +18,11 @@ public class ChatClientConfig {
     public ChatClient.Builder ollamaChatClientBuilder(
             @Qualifier("ollamaChatModel")ChatModel ollamaChatModel,
             AirlineInfoTool airlineInfoTool,
-            AirportInfoTool airportInfoTool
+            AirportInfoTool airportInfoTool,
+            FlightSearchTool flightSearchTool
             ){
         return ChatClient.builder(ollamaChatModel)
-                .defaultTools(airlineInfoTool, airportInfoTool)
+                .defaultTools(airportInfoTool, airlineInfoTool, flightSearchTool)
                 .defaultAdvisors(new SimpleLoggerAdvisor());
     }
 
@@ -29,10 +31,11 @@ public class ChatClientConfig {
     public ChatClient.Builder geminiChatClientBuilder(
             @Qualifier("googleGenAiChatModel") ChatModel geminiChatModel,
             AirportInfoTool airportInfoTool,
-            AirlineInfoTool airlineInfoTool
+            AirlineInfoTool airlineInfoTool,
+            FlightSearchTool flightSearchTool
     ){
         return ChatClient.builder(geminiChatModel)
-                .defaultTools(airlineInfoTool, airportInfoTool)
+                .defaultTools( airportInfoTool, airlineInfoTool, flightSearchTool)
                 .defaultAdvisors(new SimpleLoggerAdvisor());
     }
 }

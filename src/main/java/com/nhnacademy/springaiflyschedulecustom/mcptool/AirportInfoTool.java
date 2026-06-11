@@ -9,10 +9,10 @@ import java.util.Map;
 @Component
 public class AirportInfoTool {
     private final Map<String, String> airportCodes = Map.of(
-            "김포", "GMP",
-            "제주", "CJU",
-            "광주", "KWJ",
-            "부산", "PUS"
+            "김포", "NAARKSS",
+            "제주", "NAARKPC",
+            "광주", "NAARKJJ",
+            "부산", "NAARKPK"
     );
 
     @Tool(description = """

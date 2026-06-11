@@ -1,3 +1,9 @@
+# 공공데이터 포털 API 설정
+data-go-kr:
+  api:
+    url: http://apis.data.go.kr/1613000/DmstcFlightNvgInfo
+    service-key: ${DATA_GO_KR_API_KEY}
+
 server:
   port: 8080
 
@@ -16,10 +22,10 @@ spring:
           timeout: 300s
     google:
       genai:
-        api-key: ${GEMINI_API_KEY} # 깃허브 보안을 위해 환경변수로 변경
+        api-key: ${GEMINI_API_KEY}
         chat:
           options:
-            model: gemini-2.5-flash
+            model: gemini-1.5-flash
             temperature: 0.0
             max-output-tokens: 256
             top-p: 0.9
