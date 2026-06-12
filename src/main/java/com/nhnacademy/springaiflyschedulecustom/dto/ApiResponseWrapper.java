@@ -34,17 +34,17 @@ import java.util.List;
 
 
 @Data
-public class ApiResponseWrapper {
+public class ApiResponseWrapper<T> {
 
     @JsonProperty("response")
-    private Response response;
+    private Response<T> response;
 
     @Data
-    public static class Response{
+    public static class Response<T>{
         @JsonProperty("header")
         private ResponseHeader header;
         @JsonProperty("body")
-        private ResponseBody body;
+        private ResponseBody<T> body;
     }
 
     @Data
@@ -56,9 +56,9 @@ public class ApiResponseWrapper {
     }
 
     @Data
-    public static class ResponseBody{
+    public static class ResponseBody<T>{
         @JsonProperty("items")
-        private Items items;
+        private Items<T> items;
 
         @JsonProperty("numOfRows")
         private String numOfRows;
@@ -68,9 +68,9 @@ public class ApiResponseWrapper {
         private String totalCount;
     }
     @Data
-    public static class Items{
+    public static class Items<T>{
         @JsonProperty("item")
-        private List<FlightInfoResponse> item;
+        private List<T> item;
     }
 
 

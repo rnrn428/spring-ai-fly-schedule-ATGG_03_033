@@ -7,12 +7,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class AirportInfoResponse {
-    @JsonProperty("airportId")
-    private String airportId;
-    @JsonProperty("airportNm")
-    private String airportName;
+@NoArgsConstructor
+@Builder
+public class AirlineInfoResponse {
+    @JsonProperty("airlineId")
+    private String airlineId;
+    @JsonProperty("airlineNm")
+    private String airlineName;
 }
