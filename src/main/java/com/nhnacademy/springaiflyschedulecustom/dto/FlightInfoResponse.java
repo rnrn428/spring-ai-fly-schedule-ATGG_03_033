@@ -49,9 +49,9 @@ public class FlightInfoResponse {
     @JsonProperty("arrPlandTime")
     private String arriveTime;
     @JsonProperty("economyCharge")
-    private String economyCharge;
+    private Integer economyCharge;
     @JsonProperty("prestigeCharge")
-    private String prestigeCharge;
+    private Integer prestigeCharge;
     @JsonProperty("depAirportNm")
     private String departureAirportName;
 

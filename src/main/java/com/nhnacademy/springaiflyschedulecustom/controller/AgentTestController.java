@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/agent")
@@ -37,8 +38,8 @@ public class AgentTestController {
 
     @GetMapping("/search")
     public ApiResponse<List<FlightInfoResponse>> testAgentChaining(@RequestParam String departure,
-                                                      @RequestParam String arrival,
-                                                      @RequestParam String date){
+                                                                              @RequestParam String arrival,
+                                                                              @RequestParam String date){
 
             List<FlightInfoResponse> result = flightSearchAgent.searchFlights(departure, arrival, date);
 

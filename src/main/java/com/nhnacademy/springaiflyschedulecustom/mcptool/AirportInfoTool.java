@@ -49,8 +49,10 @@ public class AirportInfoTool {
         if(airportCodeCache.isEmpty()){
             getAirportList();
         }
-        String code = airportCodeCache.get(airportName);
+        //String code = airportCodeCache.get(airportName);
 
+        String cleanedName = airportName.replace("공항", "").replace("도","").trim();
+        String code = airportCodeCache.get(cleanedName);
         if(code == null){
             log.warn("공항 코드를 찾을 수 없음 : {}", airportName);
             return "알 수 없는 공항입니다: " + airportName;
