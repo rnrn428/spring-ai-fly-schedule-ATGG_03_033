@@ -1,4 +1,4 @@
-package com.nhnacademy.springaiflyschedulecustom.agent;
+package com.nhnacademy.springaiflyschedulecustom.service.agent;
 
 import com.nhnacademy.springaiflyschedulecustom.dto.FlightInfoResponse;
 import com.nhnacademy.springaiflyschedulecustom.service.ApiClientService;
@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 @Slf4j

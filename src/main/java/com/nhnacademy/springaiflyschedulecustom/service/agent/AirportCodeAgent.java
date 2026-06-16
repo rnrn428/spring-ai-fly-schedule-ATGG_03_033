@@ -1,4 +1,4 @@
-package com.nhnacademy.springaiflyschedulecustom.agent;
+package com.nhnacademy.springaiflyschedulecustom.service.agent;
 
 import com.nhnacademy.springaiflyschedulecustom.mcptool.AirportInfoTool;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,6 @@ public class AirportCodeAgent {
         if(text != null && text.trim().startsWith("NAARK")){
             return text.trim();
         }
-
 
         String code = airportInfoTool.getAirportCode(text);
 

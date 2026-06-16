@@ -1,8 +1,8 @@
 package com.nhnacademy.springaiflyschedulecustom.controller;
 
-import com.nhnacademy.springaiflyschedulecustom.agent.AirportCodeAgent;
-import com.nhnacademy.springaiflyschedulecustom.agent.DateParserAgent;
-import com.nhnacademy.springaiflyschedulecustom.agent.FlightSearchAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.AirportCodeAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.DateParserAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.FlightSearchAgent;
 import com.nhnacademy.springaiflyschedulecustom.dto.ApiResponse;
 import com.nhnacademy.springaiflyschedulecustom.dto.FlightInfoResponse;
 import com.nhnacademy.springaiflyschedulecustom.service.ApiClientService;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/agent")

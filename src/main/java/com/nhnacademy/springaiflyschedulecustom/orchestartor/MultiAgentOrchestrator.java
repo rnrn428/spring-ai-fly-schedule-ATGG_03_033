@@ -1,9 +1,9 @@
 package com.nhnacademy.springaiflyschedulecustom.orchestartor;
 
-import com.nhnacademy.springaiflyschedulecustom.agent.FlightSearchAgent;
-import com.nhnacademy.springaiflyschedulecustom.agent.GroupingAgent;
-import com.nhnacademy.springaiflyschedulecustom.agent.PriceFilterAgent;
-import com.nhnacademy.springaiflyschedulecustom.agent.TimeFilterAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.FlightSearchAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.GroupingAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.PriceFilterAgent;
+import com.nhnacademy.springaiflyschedulecustom.service.agent.TimeFilterAgent;
 import com.nhnacademy.springaiflyschedulecustom.dto.FlightInfoResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

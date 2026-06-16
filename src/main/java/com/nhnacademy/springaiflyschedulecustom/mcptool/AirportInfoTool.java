@@ -21,13 +21,14 @@ public class AirportInfoTool {
 
     private Map<String, String> airportCodeCache = new HashMap<>();
 
-    // 전체 공항 목록 조회 (AI용 도구가 아닌 내부 캐싱용 메서드)
+    // 전체 공항 목록 조회 (AI 도구가 아닌 내부 캐싱용 메서드)
     public List<AirportInfoResponse> getAirportList(){
         log.info("MCP Tool 호출 : getAirportList()");
 
         List<AirportInfoResponse> airports = apiClientService.getAirportList();
 
-        airportCodeCache = airports.stream().collect(Collectors.toMap(
+        airportCodeCache = airports.stream()
+                .collect(Collectors.toMap(
                 AirportInfoResponse::getAirportName,
                 AirportInfoResponse::getAirportId,
                 (existing, replacement) -> existing

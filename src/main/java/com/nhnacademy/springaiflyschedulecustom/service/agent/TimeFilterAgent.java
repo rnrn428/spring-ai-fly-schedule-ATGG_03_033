@@ -1,4 +1,4 @@
-package com.nhnacademy.springaiflyschedulecustom.agent;
+package com.nhnacademy.springaiflyschedulecustom.service.agent;
 
 
 import com.nhnacademy.springaiflyschedulecustom.dto.FlightInfoResponse;
